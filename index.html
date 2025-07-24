@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -16,39 +15,68 @@
 
     <!-- 필터 영역 -->
     <div class="bg-white rounded-xl shadow p-4 mb-6 flex flex-wrap gap-4 items-end">
-      <div>
-        <label class="text-sm font-medium">시작일</label>
-        <input type="date" class="mt-1 block w-full border rounded p-2 text-sm" />
-      </div>
-      <div>
-        <label class="text-sm font-medium">종료일</label>
-        <input type="date" class="mt-1 block w-full border rounded p-2 text-sm" />
-      </div>
-      <div>
-        <label class="text-sm font-medium">정산 상태</label>
-        <select class="mt-1 block w-full border rounded p-2 text-sm">
-          <option>전체</option>
-          <option>정산 완료</option>
-          <option>정산 대기</option>
-          <option>정산 보류</option>
-          <option>환불/취소</option>
-        </select>
-      </div>
-      <div>
-        <label class="text-sm font-medium">회원 구분</label>
-        <select class="mt-1 block w-full border rounded p-2 text-sm">
-          <option>전체</option>
-          <option>KINDO</option>
-          <option>KSPO1</option>
-          <option>KSPO2</option>
-          <option>센터 회원</option>
-        </select>
-      </div>
-      <div class="flex-1">
-        <label class="text-sm font-medium">검색</label>
-        <input type="text" placeholder="회원명, 강사닉네임 등" class="mt-1 w-full border rounded p-2 text-sm" />
-      </div>
-      <button class="bg-blue-600 text-white px-4 py-2 rounded text-sm">검색</button>
+  <div>
+    <label class="text-sm font-medium">시작일</label>
+    <input type="date" class="mt-1 block w-full border rounded p-2 text-sm" />
+  </div>
+  <div>
+    <div class="flex gap-2 items-end">
+  <div>
+    <label class="text-sm font-medium">종료일</label>
+    <input type="date" class="mt-1 block w-full border rounded p-2 text-sm" />
+  </div>
+  <div class="flex gap-2">
+    <button class="border border-gray-300 rounded px-3 py-1 text-sm hover:bg-gray-100">지난달</button>
+    <button class="border border-gray-300 rounded px-3 py-1 text-sm hover:bg-gray-100">이번달</button>
+  </div>
+</div>
+  </div>
+  <div>
+    <label class="text-sm font-medium">정산 상태</label>
+    <select class="mt-1 block w-full border rounded p-2 text-sm">
+      <option>전체</option>
+      <option>정산 완료</option>
+      <option>정산 대기</option>
+      <option>정산 보류</option>
+      <option>환불/취소</option>
+    </select>
+  </div>
+  <div>
+    <label class="text-sm font-medium">회원 구분</label>
+    <select class="mt-1 block w-full border rounded p-2 text-sm">
+      <option>전체</option>
+      <option>센터</option>
+      <option>KSPO1</option>
+      <option>KSPO2</option>
+    </select>
+  </div>
+  <div>
+    <label class="text-sm font-medium">센터</label>
+    <select class="mt-1 block w-full border rounded p-2 text-sm">
+      <option>전체</option>
+      <option>서초센터</option>
+      <option>마포센터</option>
+      <option>수원센터</option>
+    </select>
+  </div>
+  <div>
+    <label class="text-sm font-medium">수업 구분</label>
+    <select class="mt-1 block w-full border rounded p-2 text-sm">
+      <option>전체</option>
+      <option>온라인</option>
+      <option>오프라인</option>
+      <option>통합 온라인</option>
+      <option>통합 오프라인</option>
+    </select>
+  </div>
+</div>
+<div class="w-full flex items-end gap-4 mt-4">
+  <div class="flex-1">
+    <label class="text-sm font-medium">검색</label>
+    <input type="text" class="mt-1 block w-full border rounded p-2 text-sm" placeholder="회원명, 강사닉네임 등" />
+  </div>
+  <button class="bg-blue-600 text-white px-4 py-2 rounded text-sm">검색</button>
+</div>
     </div>
 
     <!-- 요약 영역 -->
@@ -75,6 +103,8 @@
             <th class="p-4">일시</th>
             <th class="p-4">회원</th>
             <th class="p-4">회원 구분</th>
+            <th class="p-4">센터</th>
+            <th class="p-4">수업 구분</th>
             <th class="p-4">수업명</th>
             <th class="p-4">강사 닉네임</th>
             <th class="p-4">금액</th>
@@ -88,7 +118,9 @@
           <tr class="border-t">
             <td class="p-4">2025-06-30 06:41</td>
             <td class="p-4">신바람</td>
-            <td class="p-4">KINDO</td>
+            <td class="p-4">센터</td>
+            <td class="p-4">서초센터</td>
+            <td class="p-4">오프라인</td>
             <td class="p-4">아침 체력증진 PT</td>
             <td class="p-4">이해인</td>
             <td class="p-4">₩15,000</td>
@@ -101,6 +133,8 @@
             <td class="p-4">2025-06-30 09:59</td>
             <td class="p-4">킬리만자로</td>
             <td class="p-4">KSPO2</td>
+            <td class="p-4">마포센터</td>
+            <td class="p-4">통합 오프라인</td>
             <td class="p-4">코어 강화 필라테스</td>
             <td class="p-4">체리쌤</td>
             <td class="p-4">₩20,000</td>
@@ -113,6 +147,8 @@
             <td class="p-4">2025-06-30 12:00</td>
             <td class="p-4">jaaef11</td>
             <td class="p-4">KSPO1</td>
+            <td class="p-4">수원센터</td>
+            <td class="p-4">온라인</td>
             <td class="p-4">재활 스트레칭</td>
             <td class="p-4">치료사세진쌤</td>
             <td class="p-4">₩27,500</td>
@@ -125,13 +161,13 @@
       </table>
     </div>
 
-    <!-- 페이지네이션 -->
-    <div class="mt-6 flex justify-center gap-2 text-sm">
-      <button class="px-3 py-1 border rounded">&laquo;</button>
-      <button class="px-3 py-1 bg-blue-600 text-white rounded">1</button>
-      <button class="px-3 py-1 border rounded">2</button>
-      <button class="px-3 py-1 border rounded">&raquo;</button>
-    </div>
-  </div>
-</body>
+    
+<div class="mt-24 text-base text-gray-700 space-y-4">
+<p>1. 회원 구분에 '센터'를 포함하여, 기존 센터 회원과 외부 회원을 구분합니다. (수수료 관련)</p>
+<p>2. 수업 구분은 총 4가지로 분류됩니다: 온라인 수업, 오프라인 수업, 통합 온라인 수업, 통합 오프라인 수업. (수수료 관련)</p>
+<p>3. 회원 구분과 수업 구분에 따라 핏토 수수료가 달라집니다. 핏토 회원의 오프라인 수강권 결제 시 수수료는 15%이며, 센터 회원은 2%입니다.</p>
+<p>4. 핏토 및 센터 관리자가 코멘트를 입력할 수 있습니다.</p>
+<p>5. 정산 상태는 핏토 관리자만 변경할 수 있으며, '정산 보류'로 설정된 수업은 정산 집계에서 자동으로 제외됩니다.</p>
+<p>6. 수업의 자세한 형태—1회 수업, 프로그램 수업, 수업 길이 등—은 수업 관리 화면에서 볼 수 있도록 합니다.</p>
+</div>
 </html>

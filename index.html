@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <div class="max-w-7xl mx-auto p-6">
+  <div class="max-w-7xl mx-auto px-6 py-10">
     <!-- 헤더 -->
     <header class="mb-6">
       <h1 class="text-5xl font-bold">정산 관리</h1>
@@ -51,7 +51,7 @@
     </select>
   </div>
   <div>
-    <label class="text-sm font-medium">센터</label>
+    <label class="text-sm font-medium">센터 구분</label>
     <select class="mt-1 block w-full border rounded p-2 text-sm">
       <option>전체</option>
       <option>서초센터</option>
@@ -162,12 +162,12 @@
     </div>
 
     
-<div class="mt-24 text-base text-gray-700 space-y-4">
+<div class="mt-60 text-lg text-gray-700 space-y-4 px-24">
 <p>1. 회원 구분에 '센터'를 포함하여, 기존 센터 회원과 외부 회원을 구분합니다. (수수료 관련)</p>
 <p>2. 수업 구분은 총 4가지로 분류됩니다: 온라인 수업, 오프라인 수업, 통합 온라인 수업, 통합 오프라인 수업. (수수료 관련)</p>
 <p>3. 회원 구분과 수업 구분에 따라 핏토 수수료가 달라집니다. 핏토 회원의 오프라인 수강권 결제 시 수수료는 15%이며, 센터 회원은 2%입니다.</p>
 <p>4. 핏토 및 센터 관리자가 코멘트를 입력할 수 있습니다.</p>
-<p>5. 정산 상태는 핏토 관리자만 변경할 수 있으며, '정산 보류'로 설정된 수업은 정산 집계에서 자동으로 제외됩니다.</p>
+<p>5. 정산 상태는 핏토 관리자만 변경할 수 있으며, '정산 보류'로 설정된 수업은 정산 집계에서 자동으로 제외됩니다. (화면에는 노출, 정산 합계에는 제외)</p>
 <p>6. 수업의 자세한 형태—1회 수업, 프로그램 수업, 수업 길이 등—은 수업 관리 화면에서 볼 수 있도록 합니다.</p>
 </div>
 </html>
